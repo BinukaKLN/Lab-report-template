@@ -1,0 +1,11 @@
+1) Download and install Texwork from the website https://tug.org/texworks/
+
+2) Download and install the MikTex console from the website https://miktex.org/download
+
+3) Download the given zip file and extract all the files into a single folder
+
+4) Open Texwork
+
+5) Open ELEC 11141 Lab report template (La)Tex file from the open menu of Texwork
+
+6) Run the file

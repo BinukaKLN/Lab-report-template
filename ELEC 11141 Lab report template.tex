@@ -1,0 +1,164 @@
+%This is Template to be used in writing a Lab report, This is a property of Department of Physics and Electronics in University of Kelaniya, Sri Lanka
+
+
+
+\documentclass[11pt]{report}	%Define the document
+
+\usepackage[utf8]{inputenc}	%few packages are added to do the formatting for our Lab report			
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Basic Electronics Laboratory}
+\lhead{ELEC 11141}
+\rfoot{Page \thepage}
+
+
+
+\begin{document}	%Start the document. Everything before this is formatting.  
+%%%%%%%%%%Let's work on the title page%%%%%%%%%%%%%
+
+\begin{titlepage}	%Start of title page.
+\centering 	%Horizontally centre the page. 
+
+\vspace*{\fill} 	%Vertically centre the page (vspace = vertical space)									
+
+\large{ELEC 11141}\\ 	%Add a course module here
+
+\LARGE\textbf{Experiment no: XX} 	%Enter the experiment number
+
+\raisebox{-\baselineskip}{\rule{\textwidth}{1px}}
+\rule{\textwidth}{1px}
+\vspace{0.5 cm}	%leave 1cm space afterward
+					
+\huge\textbf{Experiment Title} 	%Type the experment name
+
+\vspace{0.5 cm}	%leave 1cm space afterward
+
+\rule{\textwidth}{1px}
+\vspace{6 cm}	%let's leave some more space
+
+\begin{flushleft} 	%align to left
+\large{Name: Name with Initials\\		%Name, Student no,Partner's no, and date of experiment. 
+	   Student No: PS/20XX/XX \\
+	   Partner's No: PS/20XX/XX\\
+	   Date of experiment: Date\\}
+
+\vspace*{\fill}	
+
+\end{flushleft}
+\end{titlepage}	%End of the title page. 
+
+%%%%%%%%%%%% Now you can start your report %%%%%%%%%
+
+\section*{Experiment No:} 
+XX 	%type experiment number
+
+\section*{Experiment Name:}
+ Name of the Experiment  	%type experiment name
+
+\section*{Apparatus:}
+Signal generator, Oscilloscope, Multimeter, $1 k\Omega $ resistor, $4.7 \mu F$ capacitor, etc. 	 	%type apparatus used
+
+\section*{Theory and diagrams:}
+
+
+
+Theory and diagram details are typed in here. Most of the time, this is a section where you would want to include a figure. Now to include a figure, we have used the graphicx package. \textcolor{red}{\textbf{It is important to note that the figures included should be in the same folder for \LaTeX to find them automatically}}. You could always give the path in the \LaTeX code if the figure is located somewhere else.
+\begin{figure}[h] %h means float the picture, you could place it in a specify position using t-for top of the page, b- for bottom etc.
+\centering  %this is used to position the figure in the center of the paper
+\includegraphics[width=0.2\textwidth]{Smiley face} %Here type the name of the figure in jpeg or png ****The figure should be in the same folder*** 0.2\textwidth means how big is it 		                                                                                        compared to the text width, here it is just 20% of the text width
+\caption{Smiley face} %figure caption automatically number the figure in the order they are included
+\end{figure}
+
+
+When writing the report, you may want to use some math symbols. Math symbols are typed in between two '\$' symbols. for ex: $E = m C^2$ and $\psi = e^{-i (kx- \omega t)}$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%Delet from here%%%%%%%%%%%%%%%%%
+\section*{Observations:}
+
+\textcolor{blue}{You are going to attach the signed observation sheet from your lab. So might need to start from a new page in the next section. We can use a page break for this.} Please remember to delete the Observation section and text.
+
+%%%%%%%%%%%%%%%%%%%%Delete upto here%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\section*{Calculations and Results:}
+
+You might need to type equations in this section, as demonstrated below. We could use the following method to write and number the equations. First, you could write the equation and label it and refer to the equation by the label, so \LaTeX will automatically fill out the equation number. For example, the equation \ref{eu_eqn} is known as the Euler equation. Here the equation is referred to using the label "eu\_eqn".
+
+\begin{equation} \label{eu_eqn}
+e^{\pi i} + 1 = 0
+\end{equation}
+
+\begin{equation} \label{ohm law}
+V=I \times R
+\end{equation}
+
+The equation in \ref{ohm law} is known as Ohm's law
+
+Now let's try some more
+
+\begin{equation} \label{eq1}
+\begin{split}
+A & = \frac{\pi r^2}{2} \\
+& = \frac{1}{2} \pi r^2
+\end{split}
+\end{equation}
+
+Additionally, we might have to add tables to tabulate the results, one of the ways is to package tabularx
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ |c|c|c|  }
+ \hline
+ \multicolumn{3}{|c|}{Data from the Lab} \\
+ \hline
+Data point & Current  & Voltage \\
+ \hline
+1 & 10 & 1.5\\
+2 & 20 & 3.0\\
+3 & 30 & 4.5\\
+ \hline
+\end{tabular}
+\caption{Sample data table}
+\end{table}
+
+You could include the graphs as figures in the document.
+
+\section*{Conclusions:} 
+
+It would be convenient to itemize some factors to imply your idea shortly and sweetly.
+
+Lists are easy to create:
+\begin{itemize}
+  \item Here is an example
+  \item Individual entries are indicated with a black dot, a so-called bullet.
+  \item The text in the entries may be of any length.
+\end{itemize}
+
+Numbered (ordered) lists are easy to create:
+\begin{enumerate}
+  \item Items are numbered automatically.
+  \item The numbers start at 1 with each use of the \texttt{enumerate} environment.
+  \item Another entry in the list
+\end{enumerate}
+
+\section*{Discussion:} 
+
+You can do much more from LaTex. You would find that \LaTeX is used as a standard template for many occupations. Especially in academic writing such as a dissertation, thesis, articles, etc. STEM field uses \LaTeX formatting extensively. So get an idea about it. If you have any questions, ask your demonstrators to explain.
+
+\section*{New title:} 
+
+If you need more sections, you can add them. Feel free to edit it as you like.
+
+
+\end{document}	%End of the document. 
